@@ -13,4 +13,4 @@ const ownerSchema = mongoose.Schema({
     picture: String
 });
 
-module.expotrs = mongoose.model("owner", ownerSchema);
+module.exports = mongoose.model("owner", ownerSchema);
