@@ -2,14 +2,17 @@ const mongoose = require('mongoose');
 
 
 const userSchema = mongoose.Schema({
-    fullname: String,
+    fullname: {
+        type:String,
+        minLength: 3,
+        trim:true,
+    },
     email : String,
     password: String,
     cart: {
         type : Array,
         default: []
     },
-    isadmin: Boolean,
     order:{
         type : Array,
         default: []
@@ -18,4 +21,4 @@ const userSchema = mongoose.Schema({
     picture: String
 });
 
-module.expotrs = mongoose.model("user", userSchema);
+module.exports = mongoose.model("user", userSchema);
