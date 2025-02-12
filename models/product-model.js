@@ -10,7 +10,7 @@ const productSchema = mongoose.Schema({
         default: 0
     },
     bgcolor : String,
-    panalcolor : String,
+    panelcolor : String,
     textcolor : String
 });
 
